@@ -2,14 +2,15 @@
 
 import React from "react";
 
-function Floor(props) {
+import { MeshProps } from '@react-three/fiber';
+
+const Floor = (props: MeshProps) => {
   return (
-    <mesh {...props} recieveShadow>
-      <boxBufferGeometry args={[20,1,10]} />
-      <meshPhysicalMaterial color='white' />
+    <mesh {...props} receiveShadow>
+      <boxBufferGeometry args={[20, 1, 10]} />
+      <meshStandardMaterial color="white" />
     </mesh>
   );
-}
+};
 
 export default Floor;
-
