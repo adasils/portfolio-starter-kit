@@ -6,31 +6,23 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 const ThreeDModel = () => {
-  const [model, setModel] = useState<THREE.Object3D | null>(null);
+  const [model, setModel] = useState<THREE.Group | null>(null);
 
   useEffect(() => {
     const loader = new GLTFLoader();
-    loader.load(
-      '/models/model.glb', // Путь к модели в папке public
-      (gltf) => {
-        setModel(gltf.scene);
-      },
-      undefined,
-      (error) => {
-        console.error('Error loading 3D model', error);
-      }
-    );
+    loader.load('/model.glb', (gltf) => {
+      setModel(gltf.scene);
+    });
   }, []);
-
-  if (!model) return <div>Loading...</div>;
 
   return (
     <Canvas>
-      <ambientLight intensity={0.5} />
+      {/* Используем ambientLight без ошибок типов */}
+      <ambientLight args={[0x404040, 0.5]} />  {/* args вместо intensity */}
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-      <primitive object={model} />
+      {model && <primitive object={model} />}
     </Canvas>
   );
-};
+}
 
 export default ThreeDModel;
