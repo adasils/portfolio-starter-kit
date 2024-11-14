@@ -53,6 +53,9 @@ importers:
       tailwindcss:
         specifier: 4.0.0-alpha.13
         version: 4.0.0-alpha.13
+      three:
+        specifier: ^0.170.0
+        version: 0.170.0
       typescript:
         specifier: 5.3.3
         version: 5.3.3
