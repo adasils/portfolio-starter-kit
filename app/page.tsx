@@ -1,5 +1,7 @@
 'use client';
 import { BlogPosts } from 'app/components/posts';
+import { Canvas } from "@react-three/fiber";
+import Floor from "../components/Floor";
 
 export default function Page() {
   return (
