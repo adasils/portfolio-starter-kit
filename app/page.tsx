@@ -6,7 +6,6 @@ export default function Page() {
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         My Portfolio
       </h1>
-      <div id="3d-container" style="width: 100%; height: 500px;"></div>
       <p className="mb-4">
         {I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
         Vim's keystroke commands and tabs' flexibility for personal viewing
