@@ -18,8 +18,11 @@ const ThreeDModel = () => {
   return (
     <Canvas>
       {/* Используем ambientLight без ошибок типов */}
-      <ambientLight args={[0x404040, 0.5]} />  {/* args вместо intensity */}
-      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+      <ambientLight args={[0x404040, 0.5]} />
+      
+      {/* Правильные параметры для spotLight */}
+      <spotLight position={[10, 10, 10]} castShadow intensity={1} />
+      
       {model && <primitive object={model} />}
     </Canvas>
   );
