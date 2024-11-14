@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        CAVE
+        My Portfolio
       </h1>
       <div id="3d-container" style="width: 100%; height: 500px;"></div>
       <p className="mb-4">
