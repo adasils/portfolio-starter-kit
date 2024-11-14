@@ -40,15 +40,6 @@ export default function Page() {
 
 
       <div className="my-8">
-           <Canvas
-        shadows
-        className={css.canvas}
-        camera={{
-          position: [-6, 7, 7],
-        }}
-      >
-     <Floor/>
-      </Canvas>
       </div>
     </section>
   );
