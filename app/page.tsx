@@ -14,8 +14,18 @@ export default function Page() {
         early error detection ensures cleaner code, and my preference for dark
         mode, which eases long coding sessions by reducing eye strain.`}
       </p>
+
+
       <div className="my-8">
-        <ThreeDModel />
+           <Canvas
+        shadows
+        className={css.canvas}
+        camera={{
+          position: [-6, 7, 7],
+        }}
+      >
+     <Floor/>
+      </Canvas>
       </div>
     </section>
   );
