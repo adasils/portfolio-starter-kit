@@ -1,13 +1,15 @@
-import { MeshProps } from '@react-three/fiber';
+//components/Floor.jsx
 
-const Floor = (props: MeshProps) => {
+import React from "react";
+
+function Floor(props) {
   return (
-    <mesh {...props} receiveShadow>
-      <boxBufferGeometry args={[20, 1, 10]} />
-      {/* Можно использовать meshStandardMaterial, который тоже поддерживает color */}
-      <meshStandardMaterial color="white" />
+    <mesh {...props} recieveShadow>
+      <boxBufferGeometry args={[20,1,10]} />
+      <meshPhysicalMaterial color='white' />
     </mesh>
   );
-};
+}
 
 export default Floor;
+
